@@ -1,5 +1,7 @@
 import { Routes, Route, Link } from 'react-router-dom';
 import Index from './pages/Index';
+import Home from './pages/Home';
+import Dashboard from './pages/Dashboard';
 import Camisas from './pages/Camisas';
 
 function App() {
@@ -14,6 +16,12 @@ function App() {
             <Link to="/" className="text-foreground hover:text-primary transition-colors">
               Início
             </Link>
+            <Link to="/home" className="text-foreground hover:text-primary transition-colors">
+              Loja
+            </Link>
+            <Link to="/dashboard" className="text-foreground hover:text-primary transition-colors">
+              Painel
+            </Link>
             <Link to="/camisas" className="text-foreground hover:text-primary transition-colors">
               Camisas
             </Link>
@@ -23,6 +31,8 @@ function App() {
       <main className="flex-1">
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/camisas" element={<Camisas />} />
         </Routes>
       </main>

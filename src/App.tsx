@@ -23,7 +23,6 @@ function App() {
         <Route path="/" element={<Index />} />
         <Route path="/camisas" element={<Camisas />} />
       </Routes>
-    </BrowserRouter>
   );
 }
 

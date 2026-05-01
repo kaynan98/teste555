@@ -4,6 +4,7 @@ import Camisas from './pages/Camisas';
 
 function App() {
   return (
+    <div className="min-h-screen bg-background flex flex-col">
       <nav className="bg-background border-b border-border px-4 py-3">
         <div className="container mx-auto flex items-center justify-between">
           <Link to="/" className="text-xl font-bold text-foreground">
@@ -19,10 +20,18 @@ function App() {
           </div>
         </div>
       </nav>
-      <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/camisas" element={<Camisas />} />
-      </Routes>
+      <main className="flex-1">
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/camisas" element={<Camisas />} />
+        </Routes>
+      </main>
+      <footer className="bg-muted py-6 border-t border-border">
+        <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
+          <p>&copy; 2024 Loja do Mengão. Todos os direitos reservados.</p>
+        </div>
+      </footer>
+    </div>
   );
 }
 
